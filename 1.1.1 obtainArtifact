@@ -1,0 +1,24 @@
+void obtainArtifact() {
+    turnRight();
+    moveTillCorner();
+    turnCorner();
+    moveTillCorner();
+    turnCorner();
+    dropBeeper();
+}
+
+void moveTillCorner() {
+    moveForward();
+    turnLeft();
+    repeat(3){
+        moveForward();
+    }
+}
+
+void turnCorner() {
+    turnLeft();
+    moveForward();
+    if (onBeeper()) {
+        pickBeeper();
+    }
+}
