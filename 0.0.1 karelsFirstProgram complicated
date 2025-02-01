@@ -1,0 +1,24 @@
+void karelsFirstProgram() {
+    repeat(4) {
+        
+        if (frontIsClear()) {
+            if (onBeeper()) {
+                pickBeeper();
+            }
+            else {
+                moveForward();
+            }
+        }
+        else {
+            goUpStairLeft();
+        }
+    }
+    dropBeeper();
+    moveForward();
+}
+void goUpStairLeft() {
+    turnLeft();
+    moveForward();
+    turnRight();
+    moveForward();
+}
