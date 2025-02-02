@@ -1,0 +1,19 @@
+void defuseTwoBombs() {
+    defuseOneBomb();
+    turnLeft();
+    defuseOneBomb();
+}
+
+void defuseOneBomb() {
+    repeat (20) {
+        if (onBeeper()) {
+            pickBeeper();
+        }
+        if (frontIsClear()) {
+            moveForward();
+        }
+        else {
+            turnAround();
+        }
+    }
+}
