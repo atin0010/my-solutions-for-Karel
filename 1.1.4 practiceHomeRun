@@ -1,0 +1,12 @@
+void practiceHomeRun() {
+    moveForward();
+    repeat(39) {
+        if (!onBeeper()) {
+            moveForward();
+        }
+        else {
+            pickBeeper();
+            turnLeft();
+        }
+    }
+}
